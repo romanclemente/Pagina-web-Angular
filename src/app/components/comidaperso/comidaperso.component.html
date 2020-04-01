@@ -1,0 +1,20 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Bienvenidos, hoy os traemos:</h1>
+        <p class="lead">{{Deporte().getResume()}}</p>
+    </div>
+</div>
+<div align="center">
+
+    <img [src]="Deporte().getUrl_Img()" height="400" width="600" class="img-fluid" alt="Responsive image"
+        aling="center">
+</div>
+<div>
+    <h1>Ingredientes:</h1>
+    <ul class="list-group list-group-flush" *ngFor="let item of Deporte().getIngredientes()">
+        <li class="list-group-item">{{item}}</li>
+    </ul>
+</div>
+<br>
+<hr>
+<p>{{Deporte().getMetodoPreparacion()}}</p>

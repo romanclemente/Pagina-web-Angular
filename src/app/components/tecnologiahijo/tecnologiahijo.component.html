@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let item of Comiditas()" style="width: 18rem; margin-left: 5rem;">
+      <div class="card" style="width: 18rem;">
+        <img [src]="item.getUrl_Img()" width="1000" height="200" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.getTitulo()}}</h5>
+        <p>{{item.getResume()}}</p>
+        <a [routerLink]="['/comida',item.getTitulo()]" routerLinkActive="router-link-active" class="btn btn-primary">Ver mas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
